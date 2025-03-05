@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "./Logo";
 import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import NavLinks from "./NavLinks";
+import Link from "next/link";
 
 const SideNav = () => {
     return (
@@ -14,10 +15,10 @@ const SideNav = () => {
             <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
                 <NavLinks />
                 <div className="hidden h-auto w-full grow md:block"></div>
-                <a href="/" className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-slate-500 p-3 text-lg text-white font-bold hover:bg-slate-400 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
+                <Link href="/" className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-slate-500 p-3 text-lg text-white font-bold hover:bg-slate-400 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
                 <FontAwesomeIcon icon={faPowerOff} className="w-6" />
                 <p className="hidden md:block">Logout</p>
-                </a>
+                </Link>
             </div>
         </div>
     );
